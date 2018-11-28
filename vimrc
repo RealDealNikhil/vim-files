@@ -17,13 +17,14 @@ Plugin 'justinmk/vim-sneak'                     " goto any location using s{char
 Plugin 'ntpeters/vim-better-whitespace'         " highlights and cleans trailing whitespace
 Plugin 'hdima/python-syntax'                    " alternative python syntax highlighting
 Plugin 'yggdroot/indentline'                    " display indentation levels
-Plugin 'matze/vim-move'                         " quickly move lines and selections around
 Plugin 'easymotion/vim-easymotion'              " quickly search and jump to selection
 Plugin 'jeetsukumaran/vim-indentwise'           " navigate around blocks based on indent
 Plugin 'vim-scripts/listmaps.vim'               " :Listmaps -> see which plugin set a map
 Plugin 'pangloss/vim-javascript'                " nice js highlighting and indentation
+Plugin 'mxw/vim-jsx'                            " jsx highlighting
 Plugin 'othree/javascript-libraries-syntax.vim' " js libraries highlighting
 Plugin 'tpope/vim-surround'                     " surround with quotes, parentheses, etc
+Plugin 'yuttie/comfortable-motion.vim'          " nice scrolling
 
 " All of your plugins must be added before the following line
 call vundle#end()           " required
@@ -43,7 +44,7 @@ set smartcase
 set tabstop=4 shiftwidth=4 expandtab
 autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
-
+autocmd Filetype css setlocal ts=2 sw=2 expandtab
 
 " turn on highlighting
 syntax enable
@@ -52,20 +53,11 @@ set background=dark
 let g:solarized_termcolors=16
 let g:solarized_termtrans=1
 colorscheme solarized
-let g:used_javascript_libs='jquery,d3,underscore,backbone,react'
+let g:used_javascript_libs='jquery,react'
+highlight Visual cterm=NONE ctermbg=7 ctermfg=NONE guibg=Grey40
 
 " for indentation lines
 let g:indentLine_char='┊'
-
-" configure alt key for moving lines around
-let c='a'
-while c <= 'z'
-    exec "set <A-".c.">=\e".c
-    exec "imap \e".c." <A-".c.">"
-    let c = nr2char(1+char2nr(c))
-endw
-
-set timeout ttimeoutlen=50
 
 let g:airline#extensions#tagbar#enabled = 1
 let g:airline#extensions#tagbar#flags = 'f'
