@@ -11,6 +11,7 @@ Plugin 'VundleVim/Vundle.vim'                   " let Vundle manage Vundle, requ
 Plugin 'altercation/vim-colors-solarized'       " solarized vim
 Plugin 'kristijanhusak/vim-hybrid-material'     " vim-hybrid-material
 Plugin 'scrooloose/nerdcommenter'               " nerdcommenter
+Plugin 'scrooloose/nerdtree'                    " nerdtree for file system
 Plugin 'vim-airline/vim-airline'                " vim airline
 Plugin 'vim-airline/vim-airline-themes'         " themes for vim airline
 Plugin 'justinmk/vim-sneak'                     " goto any location using s{char}{char}
@@ -25,10 +26,14 @@ Plugin 'mxw/vim-jsx'                            " jsx highlighting
 Plugin 'othree/javascript-libraries-syntax.vim' " js libraries highlighting
 Plugin 'tpope/vim-surround'                     " surround with quotes, parentheses, etc
 Plugin 'yuttie/comfortable-motion.vim'          " nice scrolling
+Plugin 'jeetsukumaran/vim-buffergator'          " buffer management
 
 " All of your plugins must be added before the following line
 call vundle#end()           " required
 filetype plugin indent on   " required
+
+" buffers
+set hidden
 
 " Security
 set modelines=0
@@ -45,6 +50,11 @@ set tabstop=4 shiftwidth=4 expandtab
 autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
 autocmd Filetype css setlocal ts=2 sw=2 expandtab
+
+" PLUGIN SETTINGS
+
+" NERDTRee
+map <C-n> :NERDTreeToggle<CR>
 
 " turn on highlighting
 syntax enable
