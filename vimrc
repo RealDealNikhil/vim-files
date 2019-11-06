@@ -27,6 +27,7 @@ Plugin 'othree/javascript-libraries-syntax.vim' " js libraries highlighting
 Plugin 'tpope/vim-surround'                     " surround with quotes, parentheses, etc
 Plugin 'yuttie/comfortable-motion.vim'          " nice scrolling
 Plugin 'jeetsukumaran/vim-buffergator'          " buffer management
+Plugin 'kien/ctrlp.vim'                         " fuzzy finder
 
 " All of your plugins must be added before the following line
 call vundle#end()           " required
@@ -50,6 +51,7 @@ set tabstop=4 shiftwidth=4 expandtab
 autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
 autocmd Filetype css setlocal ts=2 sw=2 expandtab
+autocmd Filetype yaml setlocal ts=2 sw=2 expandtab
 
 " PLUGIN SETTINGS
 
