@@ -71,6 +71,10 @@ highlight Visual cterm=NONE ctermbg=7 ctermfg=NONE guibg=Grey40
 " for indentation lines
 let g:indentLine_char='┊'
 
+" ctrlp
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
+" airline
 let g:airline#extensions#tagbar#enabled = 1
 let g:airline#extensions#tagbar#flags = 'f'
 let g:airline_powerline_fonts=1
