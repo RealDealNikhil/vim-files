@@ -23,7 +23,7 @@ Plugin 'othree/javascript-libraries-syntax.vim' " js libraries highlighting
 Plugin 'tpope/vim-surround'                     " surround with quotes, parentheses, etc
 Plugin 'yuttie/comfortable-motion.vim'          " nice scrolling
 Plugin 'jeetsukumaran/vim-buffergator'          " buffer management
-Plugin 'kien/ctrlp.vim'                         " fuzzy finder
+Plugin 'ctrlpvim/ctrlp.vim'                     " fuzzy finder
 Plugin 'nathanaelkane/vim-indent-guides'        " better indent highlighting with <Leader>ig
 
 " All of your plugins must be added before the following line
