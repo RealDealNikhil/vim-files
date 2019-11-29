@@ -9,17 +9,13 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'                   " let Vundle manage Vundle, required
 Plugin 'altercation/vim-colors-solarized'       " solarized vim
-Plugin 'kristijanhusak/vim-hybrid-material'     " vim-hybrid-material
 Plugin 'scrooloose/nerdcommenter'               " nerdcommenter
 Plugin 'scrooloose/nerdtree'                    " nerdtree for file system
 Plugin 'vim-airline/vim-airline'                " vim airline
 Plugin 'vim-airline/vim-airline-themes'         " themes for vim airline
-Plugin 'justinmk/vim-sneak'                     " goto any location using s{char}{char}
 Plugin 'ntpeters/vim-better-whitespace'         " highlights and cleans trailing whitespace
 Plugin 'hdima/python-syntax'                    " alternative python syntax highlighting
-Plugin 'yggdroot/indentline'                    " display indentation levels
 Plugin 'easymotion/vim-easymotion'              " quickly search and jump to selection
-Plugin 'jeetsukumaran/vim-indentwise'           " navigate around blocks based on indent
 Plugin 'vim-scripts/listmaps.vim'               " :Listmaps -> see which plugin set a map
 Plugin 'pangloss/vim-javascript'                " nice js highlighting and indentation
 Plugin 'mxw/vim-jsx'                            " jsx highlighting
@@ -28,6 +24,7 @@ Plugin 'tpope/vim-surround'                     " surround with quotes, parenthe
 Plugin 'yuttie/comfortable-motion.vim'          " nice scrolling
 Plugin 'jeetsukumaran/vim-buffergator'          " buffer management
 Plugin 'kien/ctrlp.vim'                         " fuzzy finder
+Plugin 'nathanaelkane/vim-indent-guides'        " better indent highlighting with <Leader>ig
 
 " All of your plugins must be added before the following line
 call vundle#end()           " required
@@ -67,9 +64,6 @@ let g:solarized_termtrans=1
 colorscheme solarized
 let g:used_javascript_libs='jquery,react'
 highlight Visual cterm=NONE ctermbg=7 ctermfg=NONE guibg=Grey40
-
-" for indentation lines
-let g:indentLine_char='┊'
 
 " ctrlp
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
