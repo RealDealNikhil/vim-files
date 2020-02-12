@@ -54,6 +54,7 @@ autocmd Filetype yaml setlocal ts=2 sw=2 expandtab
 
 " NERDTRee
 map <C-n> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
 
 " turn on highlighting
 syntax enable
